@@ -18,3 +18,5 @@ Final output file is "output"
 data scale: 100,000 ratings (1-5) from 943 users on 1682 movies. 
 单机运行大约2，3 分钟
 V1.1版本可以考虑加大数据量，使用EMR
+
+mrjob official website: https://pythonhosted.org/mrjob/

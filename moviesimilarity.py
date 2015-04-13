@@ -8,10 +8,6 @@ import mrjob
 PRIOR_COUNT=10
 PRIOR_CORRELATION=0
 
-class ValueProtocol(object):
-	def write(self,key,values):
-		return ';'.join(key),';'.join(str(v) for v in values)
-
 class moviesimilaritis(MRJob):
 
 	OUTPUT_PROTOCOL=mrjob.protocol.JSONProtocol

@@ -17,13 +17,13 @@ class moviesimilaritis(MRJob):
 	OUTPUT_PROTOCOL=mrjob.protocol.JSONProtocol
 
 	def steps(self):
-		return[self.mr(mapper=self.group_by_ratings,
+		return[self.mr(mapper=self.group_by_uid,
 					   reducer=self.group_by_userrate),
 			   self.mr(mapper=self.generate_value_pairs,
 			   	       reducer=self.Cal_similarity)]
 
 
-	def group_by_ratings(self,key,values):
+	def group_by_uid(self,key,values):
 
 		'''
 		emit userID,movieID,rating to reducer
